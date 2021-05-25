@@ -1,0 +1,169 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue: #0000ff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+  z-index: 1;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  z-index: 1;
+}
+.header img {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  width: 60rem;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 996px) {
+  .header {
+    min-height: 60vh;
+  }
+
+  .header img {
+    width: 50rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header img {
+    width: 40rem;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .header {
+    min-height: 100vh;
+  }
+
+  .header img {
+    width: 35rem;
+  }
+}
+
+.nav {
+  color: var(--white);
+  padding: 1.6rem;
+}
+.top-nav {
+  display: none;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo h1 {
+  font-size: 3rem;
+  color: var(--white);
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  padding-right: 15rem;
+}
+.nav-link:link,
+.nav-link:visited {
+  color: var(--white);
+  padding: 0.8rem 1rem;
+  transform: all 300ms ease-in-out;
+}
+.nav-link:hover {
+  border-radius: 0.3rem;
+  background-color: var(--blue);
+}
+
+.hamburger {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 40rem;
+    height: 100%;
+    background-color: var(--black);
+    transition: all 500ms ease-in-out;
+    z-index: 100;
+  }
+  .menu.show {
+    left: 0;
+  }
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--blue);
+    padding: 1rem 1.6rem;
+  }
+  .top-nav .close {
+    color: var(--white);
+    font-size: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: block;
+    color: var(--white);
+    font-size: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    display: block;
+    font-size: 1.7rem;
+    color: var(--white);
+    padding: 1rem 0;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: start;
+    padding: 1rem 1.6rem;
+  }
+}
