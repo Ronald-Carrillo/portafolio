@@ -1,7 +1,8 @@
 :root {
   --white: #fff;
   --black: #000;
-  --blue: #0000ff;
+  --blue: #2196f3;
+  --Gray: #222;
 }
 
 *,
@@ -51,7 +52,7 @@ a {
 .header img {
   position: absolute;
   right: 14%;
-  bottom: 6rem;
+  bottom: 9rem;
   border-radius: 100%;
   border: 1px solid var(--white);
 
@@ -281,4 +282,92 @@ a {
   .icons {
     display: none;
   }
+}
+
+/* about me */
+.about {
+  margin-right: 5rem;
+  margin-left: 5rem;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin: 4rem 0;
+  color: var(--black);
+}
+.title h1 {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content-about {
+  padding: 30px;
+}
+.content-about h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  min-width: 30%;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .content-about h3 {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .content-about h3 {
+    font-size: 10px;
+  }
+}
+
+.services {
+  background: var(--black);
+}
+
+.title.white {
+  color: var(--white);
+  padding-top: 5rem;
+}
+
+.services .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.services .content .services-image {
+  padding: 40px 20px;
+  background: var(--Gray);
+  color: var(--white);
+  max-width: 340px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.services .content .services-image:hover {
+  background: #2196f3;
+}
+
+.services .content .services-image img {
+  max-width: 80px;
+  filter: invert(1);
+}
+.services .content .services-image h2 {
+  font-size: 20px;
+  font-weight: 900;
 }
