@@ -293,8 +293,9 @@ a {
 .title {
   width: 100%;
   text-align: center;
-  margin: 4rem 0;
+  margin: 0 0 0 0;
   color: var(--black);
+  padding-top: 3rem;
 }
 .title h1 {
   font-weight: 600;
@@ -310,7 +311,7 @@ a {
   padding: 30px;
 }
 .content-about h3 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -327,7 +328,7 @@ img {
     font-size: 15px;
   }
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 694px) {
   .content-about h3 {
     font-size: 10px;
   }
@@ -339,7 +340,7 @@ img {
 
 .title.white {
   color: var(--white);
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 
 .services .content {
@@ -370,4 +371,101 @@ img {
 .services .content .services-image h2 {
   font-size: 20px;
   font-weight: 900;
+}
+
+/* portfolio */
+.section-portfolio {
+  background-color: #f6f7f1;
+  text-align: center;
+}
+.section-portfolio .title h1 {
+  padding: 4rem 0;
+  margin: 0;
+  color: var(--black);
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  row-gap: 4rem;
+  column-gap: 4rem;
+  text-align: center;
+  padding: 1rem 20rem;
+}
+
+.portfolio-item {
+  border: 1px solid var(--black);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid var(--blue);
+}
+.portfolio-item h2 {
+  font-size: 2rem;
+}
+.portfolio-item p {
+  font-size: 1rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  /* border-radius: 3px; */
+  margin-bottom: 1rem;
+}
+
+.portfolio-item a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--blue);
+  color: var(--black);
+  font-size: 1rem;
+  margin: 1rem;
+  /* margin: 3rem; */
+}
+.portfolio-item i {
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .portfolio {
+    padding: 0;
+  }
+}
+
+.portfolio-item a:hover,
+.portfolio-item i:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+/* contact */
+
+.contact {
+  background: var(--black);
+}
+
+.title-one h1 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: var(--white);
+  padding-top: 3rem;
+  font-size: 600;
+}
+
+.contact .content-me {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contact .content-me i {
+  padding: 40px 20px;
+  font-size: 5rem;
+  color: var(--white);
+  margin: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.contact .content-me i:hover {
+  color: var(--blue);
 }
