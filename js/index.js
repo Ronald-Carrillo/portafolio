@@ -32,3 +32,15 @@ new TypeIt("#type1", {
   .pause(500)
   .delete(9)
   .go();
+
+// fix nav
+
+const navHeight = navBar.getBoundingClientRect().height;
+window.addEventListener("scroll", () => {
+  const scrollHeight = window.pageYOffset;
+  if (scrollHeight > navHeight) {
+    navBar.classList.add("fix-nav");
+  } else {
+    navBar.classList.remove("fix-nav");
+  }
+});
