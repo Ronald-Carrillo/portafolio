@@ -52,11 +52,11 @@ a {
 .header img {
   position: absolute;
   right: 14%;
-  bottom: 9rem;
+  bottom: 3rem;
   border-radius: 100%;
-  border: 1px solid var(--white);
+  /* border: 1px solid var(--white); */
 
-  width: 40rem;
+  width: 35rem;
   z-index: -1;
 }
 
@@ -66,14 +66,14 @@ a {
   }
 
   .header img {
-    width: 30rem;
-    top: 8rem;
+    width: 25rem;
+    top: 6rem;
   }
 }
 
 @media only screen and (max-width: 766px) {
   .header img {
-    width: 30rem;
+    width: 25rem;
   }
 }
 
@@ -83,7 +83,7 @@ a {
   }
 
   .header img {
-    width: 30rem;
+    width: 25rem;
     top: 55%;
     left: 1rem;
   }
@@ -410,7 +410,7 @@ img {
   row-gap: 4rem;
   column-gap: 4rem;
   text-align: center;
-  padding: 1rem 20rem;
+  padding: 1rem 20rem 7rem;
 }
 
 .portfolio-item {
@@ -458,7 +458,100 @@ img {
 
 /* contact */
 
-.contact {
+.title-contact {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: var(--black);
+  padding-top: 3rem;
+  font-size: 600;
+  background: var(--white);
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35vh;
+  transition: 0.5s;
+}
+
+.sci {
+  position: relative;
+  display: flex;
+}
+
+.sci li {
+  list-style: none;
+}
+/* .sci li::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 150px));
+  font-size: 14vw;
+  pointer-events: none;
+  font-weight: 700;
+  transition: 0.5s;
+  opacity: 0;
+} */
+.sci li:hover::before {
+  opacity: 0.1;
+  transform: translate(-50%, calc(-50% + 150px));
+}
+
+.sci li a {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  border-radius: 10px;
+  text-decoration: none;
+  margin: 20px;
+  font-size: 4em;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+  transition: background 0.25s;
+}
+.js-tilt-glare {
+  border-radius: 10px;
+}
+
+.sci li a:hover.linkedin {
+  background: #015f8e;
+}
+.sci li a:hover.whatsapp {
+  background: #89d631;
+}
+.sci li a:hover.envelope {
+  background: #ff0000;
+}
+.sci li a:hover.instagram {
+  background: #ff9149;
+}
+
+.sci li a .fa {
+  transition: 0.25s;
+  pointer-events: none;
+}
+.sci li a:hover .fa {
+  color: #fff;
+  transform: scale(1.7) translate(0px);
+}
+
+@media only screen and (max-width: 590px) {
+  .sci {
+    display: block;
+  }
+}
+/* .contact {
   background: var(--black);
 }
 
@@ -489,4 +582,4 @@ img {
 
 .contact .content-me i:hover {
   color: var(--blue);
-}
+} */
